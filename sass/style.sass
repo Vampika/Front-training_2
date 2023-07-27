@@ -2,19 +2,40 @@
 
 /*Переменные
 $grey-color: #777777
+$dark-brown-color: #A14F03
+$light-brown-color: #BA8554
+$first-gradient: linear-gradient(90deg, rgba($light-brown-color, 0.70) 0%, rgba(1, 1, 1, 0.70) 100%)
+$second-gradient: linear-gradient(90deg, rgba($light-brown-color, 0.7) 0%, rgba($dark-brown-color, 1) 100%)
+$box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25)
+$text-shadow: 0rem .4rem .4rem rgba(0,0,0, .25)
+
+@mixin link-style
+    text-transform: uppercase
+    text-decoration: none
+    display: inline-block
+    color: $grey-color
+    font-size: 1.8rem
+    font-weight: 600
+    letter-spacing: 0.5rem
+
+
+/*Общие стили
 
 *
     box-sizing: border-box
+    margin: 0
+    padding: 0
 
-/*Общие стили
+html
+    font-size: 10px
 
 body
     font-family: "Roboto"
     font-weight: 400
-    font-style: 16px
-    letter-spacing: 2px
+    font-size: 1.6rem
+    letter-spacing: 0.2rem
     color: $grey-color
-    padding: 50px
+    padding: 5rem
     background-color: #fff
 
 .container
@@ -25,28 +46,23 @@ body
 
 
 .logo
-    width: 56px
-    height: 70px
+    width: 5.6rem
+    height: 7rem
 
 .button
     &:link, &:visited
+        @include link-style
         position: relative
-        display: inline-block
-        width: 278px
-        height: 54px
+        width: 28rem
+        height: 5.4rem
         background-color: #fff
-        padding: 15px 40px
-        border-radius: 50px
-        text-transform: uppercase
-        text-decoration: none
-        color: $grey-color
-        font-size: 18px
-        font-weight: 600
-        letter-spacing: 5px
+        padding: 1.6rem 4rem
+        border-radius: 5rem
+
     &:hover
         transform: translateY(-5px)
         transition: all 0.2s
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+        box-shadow: $box-shadow
         &::after
             opacity: 0
             transform: scale(1.3)
@@ -56,21 +72,54 @@ body
         width: 100%
         height: 100%
         background-color: #fff
-        border-radius: 50px
+        border-radius: 5rem
         display: inline-block
         position: absolute
         top: 0
         left: 0
         z-index: -1
-        
 
+.text-button
+    font-weight: 700
+    text-decoration: none
+    color: $dark-brown-color
+    padding: 1rem
+    border-bottom: 1px solid $dark-brown-color
+    display: inline-block
+    transition: .5s all
+    &:hover
+        background-color: $dark-brown-color
+        color: #fff
+        box-shadow: $box-shadow
+
+.title
+    font-size: 3.6rem
+    font-weight: 800
+    letter-spacing: 1rem
+    text-transform: uppercase
+    background: $second-gradient
+    background-clip: text
+    color: transparent
+    transition: all .4s
+    text-align: center
+
+    &:hover
+        transform: skew(15deg, 2deg) scale(1.1)
+        text-shadow: $text-shadow
+        
+.small-title
+    color: $grey-color
+    font-size: 2rem
+    font-weight: 700
+    letter-spacing: 0.2rem
+    text-transform: uppercase
 
 /*Верхняя часть сайта
 .header
     position: relative
-    padding: 50px
+    padding: 5rem
     height: 95vh
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0%, rgba(1, 1, 1, 0.70) 100%), url("../img/top-img.png") center / cover no-repeat
+    background: $first-gradient, url("../img/top-img.png") center / cover no-repeat
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
     &__top-part
         display: flex
@@ -78,47 +127,162 @@ body
         justify-content: space-between
     &__nav-menu
         &__button
-            width: 70px
-            height: 70px
+            width: 7rem
+            height: 7rem
     &__main-part
         height: 100%
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
+        
     
-/*Основной заголовок
+/*Верхний заголовок
 .main-title
     color: #fff
-    font-size: 50px
+    font-size: 5rem
     font-weight: 800
-    letter-spacing: 10px
-    margin-bottom: 20px
+    letter-spacing: 1rem
+    margin-bottom: 2rem
     animation-name: RightToLeft
     animation-duration: 2s
     &_small
-        font-size: 42px
-        letter-spacing: 5px
+        font-size: 4.2rem
+        letter-spacing: 0.5rem
         font-weight: 300
         animation-name: LeftToRight
         animation-duration: 2s
-        margin-bottom: 50px
+        margin-bottom: 5rem
 
-/*Анимация для основного заголовка
+/*Анимация для верхнего заголовка
 @keyframes RightToLeft
     0%
         opacity: 0.1
-        transform: translateX(-200px)
+        transform: translateX(-20rem)
 
     100%
         opacity: 1
-        transform: translateX(0px)
+        transform: translateX(0rem)
 
 @keyframes LeftToRight
     0%
         opacity: 0.1
-        transform: translateX(200px)
+        transform: translateX(20rem)
 
     100%
         opacity: 1
-        transform: translateX(0px)
+        transform: translateX(0rem)
+
+
+/*Собственная система сетки, построенная на float
+
+$grid-width: 1140px
+$gutter-width: 30px
+
+/* Принимая во внимание размер сетки и отступов, а так же факт что колонок в сетке 12, вычислим размер одной колонки: ($grid-width - 11 * $gutter-width)/12)
+
+@mixin section-width($col-count)
+    width: calc((100% - 11 * $gutter-width)/12 * $col-count + $gutter-width * ($col-count - 1))
+    margin-right: $gutter-width
+    float: left
+    &:last-child
+        margin-right: 0
+
+.row
+    max-width: $grid-width
+    margin: 0 auto
+    margin-bottom: 80px
+    &::after
+        content: ""
+        display: table
+        clear: both
+    &:last-child
+        margin-bottom: 0
+
+.col
+    &-1
+        @include section-width(1)
+    &-2
+        @include section-width(2)
+    &-3
+        @include section-width(3)
+    &-4
+        @include section-width(4)
+    &-5
+        @include section-width(5)
+    &-6
+        @include section-width(6)
+    &-7
+        @include section-width(7)
+    &-8
+        @include section-width(8)
+    &-9
+        @include section-width(9)
+    &-10
+        @include section-width(10)
+    &-11
+        @include section-width(11)
+    &-12
+        @include section-width(12)
+
+
+/* Вторая часть сайта
+
+.section-about
+    padding-top: 8rem
+    padding-bottom: 5rem
+    &__title
+        margin-bottom: 8rem
+    &__titles
+        margin-bottom: 1rem
+    &__paragraphs
+        margin-bottom: 4.5rem
+
+
+.composition
+    position: relative
+    &__photo
+        width: 50%
+        border-radius: .5rem
+        position: absolute
+        transition: all 0.3s
+        backface-visibility: hidden
+        &_n1
+            z-index: 0
+            top: 0rem
+            left: 4rem
+        &_n2
+            z-index: 1
+            top: 3rem
+            right: 2rem
+        &_n3
+            z-index: 2
+            top: 14rem
+            left: 6rem
+        &:hover
+            z-index: 5
+            transform: scale(1.3)
+    &:hover &__photo:not(:hover)
+        transform: scale(0.9)
+
+/* Третья часть сайта
+.section-adventure
+    background: $first-gradient, url("../img/adventure-img.png") center / cover no-repeat
+    padding-top: 30rem
+    padding-bottom: 30rem
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
+
+
+.card
+    padding: 3rem
+    background: #fff
+    text-align: center
+    transition: all 0.2s
+    img
+        margin-bottom: 2.5rem
+    h3
+        margin-bottom: 1rem
+    &:hover
+        transform: translateY(-2rem)
+        box-shadow: $box-shadow
+
