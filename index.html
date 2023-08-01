@@ -7,13 +7,31 @@
     <title>Balloons</title>
 </head>
 <body>
+
+
+   
+
         <div class="container">
+            <div class="navigation">
+                <input type="checkbox" class="navigation__toggle" id="navigation-checkbox">
+                <label for="navigation-checkbox" class="navigation__button">
+                    <span class="navigation__icon"></span>
+                </label>
+                <div class="navigation__background"></div>
+                <nav class="navigation__wrapper">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#" class="navigation__link">О НАС</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">СКИДКИ</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">ЛУЧШИЕ ТУРЫ</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">СВЯЗАТЬСЯ С НАМИ</a></li>                                                                                                                            
+                    </ul>   
+                </nav>
+                    
+            </div>
             <header class="header">
                 <div class="header__top-part">
                     <img src="icons/logo.svg" class="logo header_logo">
-                    <nav class="header__nav-menu">
-                        <img src="icons/Nav-button.svg" class="header__nav-menu__button">
-                    </nav>
                 </div>
                 <div class="header__main-part">
                     <h1 class="main-title">ТУРЫ НА ВОЗДУШНОМ ШАРЕ</h1>
@@ -46,21 +64,195 @@
                     <div class="row">
                         <div class="col-3 card">
                             <img src="icons/planet.svg">
-                            <h3>ПРИКЛЮЧЕНИЕ</h3>
+                            <h3 class="small-title">ПРИКЛЮЧЕНИЕ</h3>
                             <p>Задача организации, в особенности же дальнейшее развитие различных в особенности же развитие различных</p>
                         </div>    
                         <div class="col-3 card"><img src="icons/gps.svg">
-                            <h3>ПРИКЛЮЧЕНИЕ</h3>
+                            <h3 class="small-title">ПРИКЛЮЧЕНИЕ</h3>
                             <p>Задача организации, в особенности же дальнейшее развитие различных в особенности же развитие различных</p></div>
                         <div class="col-3 card"><img src="icons/compas.svg">
-                            <h3>ПРИКЛЮЧЕНИЕ</h3>
+                            <h3 class="small-title">ПРИКЛЮЧЕНИЕ</h3>
                             <p>Задача организации, в особенности же дальнейшее развитие различных в особенности же развитие различных</p></div>
                         <div class="col-3 card"><img src="icons/Vector.svg">
-                            <h3>ПРИКЛЮЧЕНИЕ</h3>
+                            <h3 class="small-title">ПРИКЛЮЧЕНИЕ</h3>
                             <p>Задача организации, в особенности же дальнейшее развитие различных в особенности же развитие различных</p></div>
                     </div>
                 </section>
+                <section class="section-tours">
+                    <h2 class="title section-tours__title">наиболее популярные туры</h2>
+                    <div class="row section-tours__row">
+                        <div class="col-4">
+                            <div class="tour-card">
+                                <div class="tour-card__side tour-card__side_front">
+                                    <div class="tour-card__img tour-card__img_1"></div>
+                                    <h4 class="tour-card__title"><span>групповые</span><br><span>туры</span></h4>
+                                    <div class="tour-card__description">
+                                        <ul>
+                                            <li>Группы от 6 человек</li>
+                                            <li>Продолжительность 2 часa</li>
+                                            <li>В группе 1 гид</li><br>
+                                            <li>Дальность полета 6км</li>
+                                            <li>Бесплатные сувениры</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tour-card__side tour-card__side_back">
+                                    <h4 class="tour-card__title-back">ПОЛНАЯ СТОИМОСТЬ:</h4>
+                                    <span class="tour-card__back-span">5990&#8381;</span>
+                                    <div class="tour-card__back-button"><a href="#" class="button tour-card__back-button">забронировать</a></div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        
+                        <div class="col-4 tour-card">
+                            <div class="tour-card">
+                                <div class="tour-card__side tour-card__side_front">
+                                    <div class="tour-card__img tour-card__img_2"></div>
+                                    <h4 class="tour-card__title"><span>частные</span><br><span>туры</span></h4>
+                                    <div class="tour-card__description">
+                                        <ul>
+                                            <li>Группы от 6 человек</li>
+                                            <li>Продолжительность 2 часa</li>
+                                            <li>В группе 1 гид</li><br>
+                                            <li>Дальность полета 6км</li>
+                                            <li>Бесплатные сувениры</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tour-card__side tour-card__side_back">
+                                    <h4 class="tour-card__title-back">ПОЛНАЯ СТОИМОСТЬ:</h4>
+                                    <span class="tour-card__back-span">5990&#8381;</span>
+                                    <div class="tour-card__back-button"><a href="#" class="button tour-card__back-button">забронировать</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 tour-card">
+                            <div class="tour-card">
+                                <div class="tour-card__side tour-card__side_front">
+                                    <div class="tour-card__img tour-card__img_3"></div>
+                                    <h4 class="tour-card__title"><span>смотровые</span><br><span>площадки</span></h4>
+                                    <div class="tour-card__description">
+                                        <ul>
+                                            <li>Группы от 6 человек</li>
+                                            <li>Продолжительность 2 часa</li>
+                                            <li>В группе 1 гид</li><br>
+                                            <li>Дальность полета 6км</li>
+                                            <li>Бесплатные сувениры</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tour-card__side tour-card__side_back">
+                                    <h4 class="tour-card__title-back">ПОЛНАЯ СТОИМОСТЬ:</h4>
+                                    <span class="tour-card__back-span">5990&#8381;</span>
+                                    <div class="tour-card__back-button"><a href="#" class="button tour-card__back-button">забронировать</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-tours__button">
+                        <a href="#" class="button">забронировать</a>
+                    </div>
+
+                </section>
+
+                <section class="section-review">
+                    <div class="video-wrapper"></div>
+                        <video autoplay muted loop>
+                            <source src="img/Hot air balloons-1.mp4">
+                            <sourse src="img/Hot air balloons-2.webm">
+                        </video>
+                    
+                    
+                    <h2 class="title title_white section-review__title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+                    <div class="row">
+                        <div class="review-card">
+                            <figure class="review-card__figure">
+                               <img src="img/review-1.png">
+                               <figcaption>Марк Бродский</figcaption>
+                            </figure>
+                            <div class="review-card__text">
+                                <h3 class="small-title review-card__small-title">Я ПОЛУЧИЛ МАССУ ВПЕЧАТЛЕНИЙ</h3>
+                                <p class="review-card__p">Задача организации, в особенности же дальнейшее  развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="review-card">
+                            <figure class="review-card__figure">
+                               <img src="img/review-2.jpg">
+                               <figcaption>Лиза Аничкова</figcaption>
+                            </figure>
+                            <div class="review-card__text">
+                                <h3 class="small-title review-card__small-title">ЭТО БЫЛО ВЕЛИКОЛЕПНО И НЕЗАБЫВАЕМО</h3>
+                                <p class="review-card__p">Задача организации, в особенности же дальнейшее  развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-review__button">
+                        <a href="#" class="button">забронировать</a>
+                    </div>
+                </section>
+
+                <section class="section-booking">
+                    <div class="row">
+                        <div class="booking-card">
+                            <form action="#" class="booking-form">
+                                <h2 class="title section-booking__title">ЗАБРОНИРОВАТЬ ТУР</h2>
+                                <div class="booking-form__labels">
+                                    <input type="text" class="booking-form__input" placeholder="Имя Фамилия" id="name" required>
+                                    <label class="booking-form__label" for="name">Имя и Фамилия</label>
+                                </div>
+                                <div class="booking-form__labels">
+                                    <input type="email" class="booking-form__input" placeholder="email@mail.com" id="email" required>
+                                    <label class="booking-form__label" for="email">Почтовый адрес</label>
+                                </div>
+                                <div class="booking-form__labels booking-form__radio-labels">
+                                    <!--
+                                        <input type="radio" class="booking-form__radio" id="radio-1" name="checked">
+                                    <label for="radio-1" class="booking-form__radio-label"> <span class="booking-form__radio-button"></span>Групповой тур</label>
+                                    <input type="radio" class="booking-form__radio" id="radio-2" name="checked">
+                                    <label for="radio-2" class="booking-form__radio-label"> <span class="booking-form__radio-button"></span>Индивидуальный тур</label>
+                                    -->
+                                    <div class="booking-form__radio-wrapper">
+                                        <input type="radio" class="booking-form__radio" id="tour-1" name="cheked">
+                                        <label for="tour-1" class="booking-form__radio-label"> 
+                                            <span class="booking-form__radio-button"></span>
+                                            Групповой тур</label>
+                                    </div>
+                                       
+                                    <div class="booking-form__radio-wrapper">
+                                            <input type="radio" class="booking-form__radio" id="tour-2" name="cheked">
+                                            <label for="tour-2" class="booking-form__radio-label"> 
+                                                <span class="booking-form__radio-button"></span>
+                                                Индивидуальный тур</label>
+                                    </div>
+
+                                </div>
+                                <div class="section-booking__button">
+                                    <a href="#" class="button button_brown">забронировать</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>         
             </main>
+
+            <footer class="footer">
+                <div class="row footer__row">
+                   <a href="#"> <img src="icons/logo.svg" alt="logo"> </a>
+                </div>
+                <div class="row footer__list-row">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">О НАС</a></li>
+                        <li class="footer__item"><a href="#">СКИДКИ</a></li>
+                        <li class="footer__item"><a href="#">ЛУЧШИЕ ТУРЫ</a></li>
+                        <li class="footer__item"><a href="#">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+                        <li class="footer__item"><a href="#">СВЯЗАТЬСЯ С НАМИ</a></li>
+                    </ul>
+                </div>
+            
+        </footer>
         </div>
 
 
