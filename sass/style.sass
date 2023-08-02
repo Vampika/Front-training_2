@@ -27,7 +27,15 @@ $text-shadow: 0rem .4rem .4rem rgba(0,0,0, .25)
     padding: 0
 
 html
-    font-size: 10px
+    font-size: 62.5%
+    @media (max-width: 1250px)
+        font-size: 56.25%
+    
+    @media (max-width: 900px)
+        font-size: 50%
+    @media (min-width: 1800px)
+        font-size: 75%
+
 
 body
     font-family: sans-serif
@@ -38,6 +46,13 @@ body
     color: $grey-color
     padding: 5rem
     background-color: #fff
+    @media (max-width: 1200px)
+        padding: 3rem
+    @media (max-width: 900px)
+        font-size: 1.8rem
+    @media (max-width: 500px)
+        padding: 0
+    
 
 .container
     /*max-width: 1340px
@@ -47,8 +62,14 @@ body
 
 
 .logo
-    width: 5.6rem
-    height: 7rem
+    width: 56px
+    height: 70px
+    position: absolute
+    top: 100px
+    left: 100px
+    @media (max-width: 900px)
+        top: 40px
+        left: 50px
 
 .button
     &:link, &:visited
@@ -109,6 +130,12 @@ body
     color: transparent
     transition: all .4s
     text-align: center
+    @media (max-width: 1200px)
+        font-size: 3rem
+    @media (max-width: 990px)
+        font-size: 2.5rem
+    @media (max-width: 600px)
+        font-size: 1.8rem
     &:hover
         transform: skew(15deg, 2deg) scale(1.1)
         text-shadow: $text-shadow
@@ -167,25 +194,31 @@ body
             
     &__button
         background: #fff
-        height: 8rem
-        width: 8rem
+        height: 80px
+        width: 80px
         border-radius: 50%
         position: fixed
-        top: 10rem
-        right: 10rem
+        top: 100px
+        right: 100px
         z-index: 200
         text-align: center
         cursor: pointer
+        @media (max-width: 900px)
+            top: 50px
+            right: 50px
     &__background
-        width: 6rem
-        height: 6rem
+        width: 60px
+        height: 60px
         border-radius: 50%
         background: radial-gradient($light-brown-color, $dark-brown-color)
         position: fixed
-        right: 11rem
-        top: 11rem
+        right: 110px
+        top: 110px
         z-index: 10
         transition: all 1s
+        @media (max-width: 900px)
+            top: 60px
+            right: 60px
         /*transform: scale(150)
     &__wrapper
         height: 100vh
@@ -238,10 +271,6 @@ body
     height: 95vh
     background: $first-gradient, url("../img/top-img.png") center / cover no-repeat
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
-    &__top-part
-        display: flex
-        flex-direction: row
-        justify-content: space-between
     &__nav-menu
         &__button
             width: 7rem
@@ -252,6 +281,7 @@ body
         flex-direction: column
         justify-content: center
         align-items: center
+        text-align: center
         
     
 /*Верхний заголовок
@@ -263,6 +293,8 @@ body
     margin-bottom: 2rem
     animation-name: RightToLeft
     animation-duration: 2s
+    @media (max-width: 1200px)
+        font-size: 4.5rem
     &_small
         font-size: 4.2rem
         letter-spacing: 0.5rem
@@ -270,6 +302,8 @@ body
         animation-name: LeftToRight
         animation-duration: 2s
         margin-bottom: 5rem
+        @media (max-width: 1200px)
+            font-size: 3.5rem
 
 /*Анимация для верхнего заголовка
 @keyframes RightToLeft
@@ -309,38 +343,79 @@ $gutter-width: 30px
     max-width: $grid-width
     margin: 0 auto
     margin-bottom: 80px
+    padding: 1rem
     &::after
         content: ""
         display: table
         clear: both
     &:last-child
         margin-bottom: 0
-
+    @media (max-width: 1250px)
+        max-width: 120rem
+    @media (max-width: 900px)
+        max-width: 100rem
+        margin-bottom: 40px
 .col
     &-1
         @include section-width(1)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-2
         @include section-width(2)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-3
         @include section-width(3)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-4
         @include section-width(4)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-5
         @include section-width(5)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-6
         @include section-width(6)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-7
         @include section-width(7)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-8
         @include section-width(8)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-9
         @include section-width(9)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-10
         @include section-width(10)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-11
         @include section-width(11)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
     &-12
         @include section-width(12)
+        @media (max-width: 900px)
+            width: 100%
+            margin-bottom: 4rem
 
 
 /* Вторая часть сайта
@@ -348,6 +423,12 @@ $gutter-width: 30px
 .section-about
     padding-top: 8rem
     padding-bottom: 5rem
+    @media (max-width: 900px)
+        padding-top: 6rem
+        padding-bottom: 40rem
+    @media (max-width: 600px)
+        padding-top: 3rem
+        padding-bottom: 20rem
     &__title
         margin-bottom: 8rem
     &__titles
@@ -388,6 +469,9 @@ $gutter-width: 30px
     padding-top: 30rem
     padding-bottom: 30rem
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
+    @media (max-width: 600px)
+        padding-bottom: 9rem
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
 
 
 .card
@@ -395,6 +479,8 @@ $gutter-width: 30px
     background: #fff
     text-align: center
     transition: all 0.2s
+    @media (max-width: 1200px)
+        padding: 1rem
     img
         margin-bottom: 2.5rem
         width: 6.3rem
@@ -407,23 +493,33 @@ $gutter-width: 30px
 .section-tours
     padding-top: 8rem
     padding-bottom: 8rem
+    @media (max-width: 600px)
+        padding-top: 4rem
     &__title
         margin-bottom: 8rem
+        @media (max-width: 600px)
+            margin-bottom: 4rem
     &__row
         margin-bottom: 8rem
+        @media (max-width: 600px)
+            margin-bottom: 4rem
     &__button
         text-align: center
 
 .tour-card
     height: 50rem
     position: relative
-    perspective: 1500px    
+    perspective: 1500px
+    @media (max-width: 420px)
+        height: 59rem    
     &__img
         height: 21rem
         background-blend-mode: hard-light
        
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
         margin-bottom: 7rem
+        @media (max-width: 900px)
+            height: 30rem
         &_1
             background: $light-brown-color url("../img/tour-1.png") center / cover no-repeat
         &_2
@@ -435,6 +531,8 @@ $gutter-width: 30px
         position: absolute
         top: 18rem
         right: 0rem
+        @media (max-width: 900px)
+            top: 25rem
         span
             font-size: 2.8rem
             letter-spacing: .2rem
@@ -456,6 +554,8 @@ $gutter-width: 30px
                 margin-bottom: 2rem
                 position: relative
                 display: inline-block
+                @media (max-width: 900px)
+                    margin-right: .8rem
                 &:last-child
                     margin-bottom: 0
                 &::after
@@ -474,6 +574,8 @@ $gutter-width: 30px
         backface-visibility: hidden
         box-shadow: $box-shadow
         border-radius: .3rem
+        @media (max-width: 420px)
+            height: 59rem 
         &_front
             position: absolute
             top: 0
@@ -542,8 +644,18 @@ $gutter-width: 30px
     background-color: rgba(#fff, 0.8)
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
     height: 25rem
-    padding: 6rem 20rem
-    
+    padding: 6rem 10rem
+    @media (max-width: 900px)
+        padding-top: 2rem
+        height: 30rem
+        padding: 3rem 5rem
+    @media (max-width: 600px)
+        text-align: center
+        height: 42rem
+    @media (max-width: 550px)
+        height: 46rem
+    @media (max-width: 392px)
+        height: 52rem
     &__figure
         width: 17rem
         height: 17rem
@@ -555,6 +667,10 @@ $gutter-width: 30px
         margin-right: 4rem
         overflow: hidden
         position: relative
+        @media (max-width: 600px)
+            float: none
+            margin: 0 auto
+            margin-bottom: 2rem
         img
             width: 100%
             transition: all 0.5s
@@ -583,11 +699,17 @@ $gutter-width: 30px
     background: $second-gradient
     &__title
         margin-bottom: 3rem
+    @media (max-width: 600px)
+        padding: 1rem
 
 .booking-card
     height: 100%
     background: url("../img/form-1.png") center / cover no-repeat
     box-shadow: $box-shadow
+    display: block
+
+        
+
 
 .booking-form
     background: rgba(#fff, 0.9)
@@ -595,6 +717,11 @@ $gutter-width: 30px
     width: 65%
     height: 100%
     padding: 5rem
+    @media (max-width: 804px)
+        width: 100%
+    @media (max-width: 600px)
+        clip-path: none
+        text-align: center
     &__labels
         margin-bottom: 2rem
     &__label
@@ -664,6 +791,10 @@ $gutter-width: 30px
 .footer
     padding: 8rem
     background: #333
+    @media (max-width: 1200px)
+        padding: 4.5rem
+    @media (max-wisth: 900px)
+        padding: 1rem
     img
         width: 12rem
         height: 15rem
@@ -677,9 +808,18 @@ $gutter-width: 30px
         font-weight: 300
         text-transform: uppercase
         list-style: none
+        @media (max-width: 900px)
+            font-size: 1.2rem
     &__item
         margin-right: 5rem
         display: inline-block
+        margin-bottom: 3rem
+        @media (max-width: 1200px)
+            margin-right: 4rem
+        @media (max-width: 900px)
+            margin-right: 1rem
+
+
         a
             &:link, &:visited
                 color: #fff

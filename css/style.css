@@ -61,7 +61,22 @@ table {
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
+}
+@media (max-width: 1250px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -74,6 +89,21 @@ body {
   padding: 5rem;
   background-color: #fff;
 }
+@media (max-width: 1200px) {
+  body {
+    padding: 3rem;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+}
 
 .container {
   /*max-width: 1340px */
@@ -83,8 +113,17 @@ body {
 }
 
 .logo {
-  width: 5.6rem;
-  height: 7rem;
+  width: 56px;
+  height: 70px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+@media (max-width: 900px) {
+  .logo {
+    top: 40px;
+    left: 50px;
+  }
 }
 
 .button:link, .button:visited {
@@ -157,6 +196,21 @@ body {
   transition: all 0.4s;
   text-align: center;
 }
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 990px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
 .title:hover {
   transform: skew(15deg, 2deg) scale(1.1);
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
@@ -220,27 +274,39 @@ body {
 }
 .navigation__button {
   background: #fff;
-  height: 8rem;
-  width: 8rem;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   position: fixed;
-  top: 10rem;
-  right: 10rem;
+  top: 100px;
+  right: 100px;
   z-index: 200;
   text-align: center;
   cursor: pointer;
 }
+@media (max-width: 900px) {
+  .navigation__button {
+    top: 50px;
+    right: 50px;
+  }
+}
 .navigation__background {
-  width: 6rem;
-  height: 6rem;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: radial-gradient(#BA8554, #A14F03);
   position: fixed;
-  right: 11rem;
-  top: 11rem;
+  right: 110px;
+  top: 110px;
   z-index: 10;
   transition: all 1s;
   /*transform: scale(150) */
+}
+@media (max-width: 900px) {
+  .navigation__background {
+    top: 60px;
+    right: 60px;
+  }
 }
 .navigation__wrapper {
   height: 100vh;
@@ -296,11 +362,6 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(1, 1, 1, 0.7) 100%), url("../img/top-img.png") center/cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
-.header__top-part {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .header__nav-menu__button {
   width: 7rem;
   height: 7rem;
@@ -311,6 +372,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 /*Верхний заголовок */
@@ -323,6 +385,11 @@ body {
   animation-name: RightToLeft;
   animation-duration: 2s;
 }
+@media (max-width: 1200px) {
+  .main-title {
+    font-size: 4.5rem;
+  }
+}
 .main-title_small {
   font-size: 4.2rem;
   letter-spacing: 0.5rem;
@@ -330,6 +397,11 @@ body {
   animation-name: LeftToRight;
   animation-duration: 2s;
   margin-bottom: 5rem;
+}
+@media (max-width: 1200px) {
+  .main-title_small {
+    font-size: 3.5rem;
+  }
 }
 
 /*Анимация для верхнего заголовка */
@@ -359,6 +431,7 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   margin-bottom: 80px;
+  padding: 1rem;
 }
 .row::after {
   content: "";
@@ -367,6 +440,17 @@ body {
 }
 .row:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 1250px) {
+  .row {
+    max-width: 120rem;
+  }
+}
+@media (max-width: 900px) {
+  .row {
+    max-width: 100rem;
+    margin-bottom: 40px;
+  }
 }
 
 .col-1 {
@@ -377,6 +461,12 @@ body {
 .col-1:last-child {
   margin-right: 0;
 }
+@media (max-width: 900px) {
+  .col-1 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
 .col-2 {
   width: calc((100% - 330px) / 12 * 2 + 30px);
   margin-right: 30px;
@@ -384,6 +474,12 @@ body {
 }
 .col-2:last-child {
   margin-right: 0;
+}
+@media (max-width: 900px) {
+  .col-2 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 .col-3 {
   width: calc((100% - 330px) / 12 * 3 + 60px);
@@ -393,6 +489,12 @@ body {
 .col-3:last-child {
   margin-right: 0;
 }
+@media (max-width: 900px) {
+  .col-3 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
 .col-4 {
   width: calc((100% - 330px) / 12 * 4 + 90px);
   margin-right: 30px;
@@ -400,6 +502,12 @@ body {
 }
 .col-4:last-child {
   margin-right: 0;
+}
+@media (max-width: 900px) {
+  .col-4 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 .col-5 {
   width: calc((100% - 330px) / 12 * 5 + 120px);
@@ -409,6 +517,12 @@ body {
 .col-5:last-child {
   margin-right: 0;
 }
+@media (max-width: 900px) {
+  .col-5 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
 .col-6 {
   width: calc((100% - 330px) / 12 * 6 + 150px);
   margin-right: 30px;
@@ -416,6 +530,12 @@ body {
 }
 .col-6:last-child {
   margin-right: 0;
+}
+@media (max-width: 900px) {
+  .col-6 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 .col-7 {
   width: calc((100% - 330px) / 12 * 7 + 180px);
@@ -425,6 +545,12 @@ body {
 .col-7:last-child {
   margin-right: 0;
 }
+@media (max-width: 900px) {
+  .col-7 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
 .col-8 {
   width: calc((100% - 330px) / 12 * 8 + 210px);
   margin-right: 30px;
@@ -432,6 +558,12 @@ body {
 }
 .col-8:last-child {
   margin-right: 0;
+}
+@media (max-width: 900px) {
+  .col-8 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 .col-9 {
   width: calc((100% - 330px) / 12 * 9 + 240px);
@@ -441,6 +573,12 @@ body {
 .col-9:last-child {
   margin-right: 0;
 }
+@media (max-width: 900px) {
+  .col-9 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
 .col-10 {
   width: calc((100% - 330px) / 12 * 10 + 270px);
   margin-right: 30px;
@@ -448,6 +586,12 @@ body {
 }
 .col-10:last-child {
   margin-right: 0;
+}
+@media (max-width: 900px) {
+  .col-10 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 .col-11 {
   width: calc((100% - 330px) / 12 * 11 + 300px);
@@ -457,6 +601,12 @@ body {
 .col-11:last-child {
   margin-right: 0;
 }
+@media (max-width: 900px) {
+  .col-11 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
 .col-12 {
   width: calc((100% - 330px) / 12 * 12 + 330px);
   margin-right: 30px;
@@ -465,11 +615,29 @@ body {
 .col-12:last-child {
   margin-right: 0;
 }
+@media (max-width: 900px) {
+  .col-12 {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
 
 /* Вторая часть сайта */
 .section-about {
   padding-top: 8rem;
   padding-bottom: 5rem;
+}
+@media (max-width: 900px) {
+  .section-about {
+    padding-top: 6rem;
+    padding-bottom: 40rem;
+  }
+}
+@media (max-width: 600px) {
+  .section-about {
+    padding-top: 3rem;
+    padding-bottom: 20rem;
+  }
 }
 .section-about__title {
   margin-bottom: 8rem;
@@ -521,12 +689,23 @@ body {
   padding-bottom: 30rem;
   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
 }
+@media (max-width: 600px) {
+  .section-adventure {
+    padding-bottom: 9rem;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  }
+}
 
 .card {
   padding: 3rem;
   background: #fff;
   text-align: center;
   transition: all 0.2s;
+}
+@media (max-width: 1200px) {
+  .card {
+    padding: 1rem;
+  }
 }
 .card img {
   margin-bottom: 2.5rem;
@@ -544,11 +723,26 @@ body {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
+@media (max-width: 600px) {
+  .section-tours {
+    padding-top: 4rem;
+  }
+}
 .section-tours__title {
   margin-bottom: 8rem;
 }
+@media (max-width: 600px) {
+  .section-tours__title {
+    margin-bottom: 4rem;
+  }
+}
 .section-tours__row {
   margin-bottom: 8rem;
+}
+@media (max-width: 600px) {
+  .section-tours__row {
+    margin-bottom: 4rem;
+  }
 }
 .section-tours__button {
   text-align: center;
@@ -559,11 +753,21 @@ body {
   position: relative;
   perspective: 1500px;
 }
+@media (max-width: 420px) {
+  .tour-card {
+    height: 59rem;
+  }
+}
 .tour-card__img {
   height: 21rem;
   background-blend-mode: hard-light;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   margin-bottom: 7rem;
+}
+@media (max-width: 900px) {
+  .tour-card__img {
+    height: 30rem;
+  }
 }
 .tour-card__img_1 {
   background: #BA8554 url("../img/tour-1.png") center/cover no-repeat;
@@ -579,6 +783,11 @@ body {
   position: absolute;
   top: 18rem;
   right: 0rem;
+}
+@media (max-width: 900px) {
+  .tour-card__title {
+    top: 25rem;
+  }
 }
 .tour-card__title span {
   font-size: 2.8rem;
@@ -604,6 +813,11 @@ body {
   position: relative;
   display: inline-block;
 }
+@media (max-width: 900px) {
+  .tour-card__description ul li {
+    margin-right: 0.8rem;
+  }
+}
 .tour-card__description ul li:last-child {
   margin-bottom: 0;
 }
@@ -623,6 +837,11 @@ body {
   backface-visibility: hidden;
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 0.3rem;
+}
+@media (max-width: 420px) {
+  .tour-card__side {
+    height: 59rem;
+  }
 }
 .tour-card__side_front {
   position: absolute;
@@ -700,7 +919,30 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
   height: 25rem;
-  padding: 6rem 20rem;
+  padding: 6rem 10rem;
+}
+@media (max-width: 900px) {
+  .review-card {
+    padding-top: 2rem;
+    height: 30rem;
+    padding: 3rem 5rem;
+  }
+}
+@media (max-width: 600px) {
+  .review-card {
+    text-align: center;
+    height: 42rem;
+  }
+}
+@media (max-width: 550px) {
+  .review-card {
+    height: 46rem;
+  }
+}
+@media (max-width: 392px) {
+  .review-card {
+    height: 52rem;
+  }
 }
 .review-card__figure {
   width: 17rem;
@@ -713,6 +955,13 @@ body {
   margin-right: 4rem;
   overflow: hidden;
   position: relative;
+}
+@media (max-width: 600px) {
+  .review-card__figure {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
 }
 .review-card__figure img {
   width: 100%;
@@ -747,11 +996,17 @@ body {
 .section-booking__title {
   margin-bottom: 3rem;
 }
+@media (max-width: 600px) {
+  .section-booking {
+    padding: 1rem;
+  }
+}
 
 .booking-card {
   height: 100%;
   background: url("../img/form-1.png") center/cover no-repeat;
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
 .booking-form {
@@ -760,6 +1015,17 @@ body {
   width: 65%;
   height: 100%;
   padding: 5rem;
+}
+@media (max-width: 804px) {
+  .booking-form {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .booking-form {
+    clip-path: none;
+    text-align: center;
+  }
 }
 .booking-form__labels {
   margin-bottom: 2rem;
@@ -839,6 +1105,16 @@ body {
   padding: 8rem;
   background: #333;
 }
+@media (max-width: 1200px) {
+  .footer {
+    padding: 4.5rem;
+  }
+}
+@media (max-wisth: 900px) {
+  .footer {
+    padding: 1rem;
+  }
+}
 .footer img {
   width: 12rem;
   height: 15rem;
@@ -856,9 +1132,25 @@ body {
   text-transform: uppercase;
   list-style: none;
 }
+@media (max-width: 900px) {
+  .footer__list {
+    font-size: 1.2rem;
+  }
+}
 .footer__item {
   margin-right: 5rem;
   display: inline-block;
+  margin-bottom: 3rem;
+}
+@media (max-width: 1200px) {
+  .footer__item {
+    margin-right: 4rem;
+  }
+}
+@media (max-width: 900px) {
+  .footer__item {
+    margin-right: 1rem;
+  }
 }
 .footer__item a:link, .footer__item a:visited {
   color: #fff;
